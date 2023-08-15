@@ -98,7 +98,7 @@ h2{
     cursor: pointer;
     color: rgb(82, 82, 82);
     &:before{
-      height: 600%;
+      height: 700%;
     }
   }
 
