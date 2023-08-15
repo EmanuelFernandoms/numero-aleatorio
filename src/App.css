@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+body{
+  color: rgb(232, 232, 232);
+  background-color: rgb(55, 55, 55);
+}
+
+#numberContainer{
+  width: auto;
+  margin: auto;
+}
+
+#numberContainer p{
+  padding: 5px;
+  font-size: 45px;
+}
+
+.numero-verde {
+  color: #5fe36a !important;
+}
+
+.numero-amarelo {
+  color: #e3e935 !important; 
+}
+
+.numero-vermelho {
+  color: #ef3838 !important;
+}
+
+.App{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h2{
+  color: rgb(241, 241, 241);
+}
+
+.btn1, .btn2{
+  display: block;
+  
+
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight:bold;
+
+  color: white;
+
+  margin: 30px auto;
+  padding: 10px 35px;
+  border: 2px solid #5fe36a;
+  
+  position: relative;
+  background: none;
+
+  overflow: hidden;
+
+  &:before{
+    content: '';
+    position:absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    
+    background-color: #5fe36a;
+
+    
+    z-index: -1;
+
+    transition: .5s ease;
+
+  }
+  
+}
+
+.btn1, .btn2{
+  &:before{
+    width: 110%;
+    height: 0;
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+
+  &:hover{
+    cursor: pointer;
+    color: rgb(82, 82, 82);
+    &:before{
+      height: 600%;
+    }
+  }
+
+}
+
+.btn1{
+  transition: .4s ease;
+  &:disabled{
+    color: rgb(82, 82, 82);
+    background-color: #5fe36a;
+  }
+}
+
+.btn2{
+  transition: .4s ease;
+  &:active{
+    transition: 0s;
+    box-shadow: 0 0 20px 3px #5fe36a;
+    /* box-shadow: 0px 0px 15px 5px #5fe36a; */
+  }
+}
